@@ -8,20 +8,12 @@ class Node{
 
 }
 
-public class mul{
-
-
-
-    public static int Mul(Node a){
-        if (a == null) return 1 ;
-        return a.val * Mul(a.left) * Mul(a.right); 
-
-    }
+public class levels{
 
 
      public static int max(Node a){
-        if (a == null) return Integer.MIN_VALUE ;
-        return Math.max(a.val,Math.max(max(a.left),max(a.right))); 
+        if (a == null) return 0 ;
+        return 1 + Math.max(max(a.left),max(a.right)); 
 
     }
 
@@ -43,6 +35,5 @@ public class mul{
                   c.left = f;
                   System.out.println(max(a));
 
-                System.out.println(Mul(a));
     }
 }
