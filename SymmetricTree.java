@@ -26,22 +26,20 @@ public class SymmetricTree {
 
     public static boolean mirror(Node root1, Node root2) {
 
-        // Both are null
+      
         if (root1 == null && root2 == null) {
             return true;
         }
 
-        // One is null
+        
         if (root1 == null || root2 == null) {
             return false;
         }
 
-        // Values are different
         if (root1.val != root2.val) {
             return false;
         }
 
-        // Compare opposite sides
         return mirror(root1.left, root2.right)
                 && mirror(root1.right, root2.left);
     }
