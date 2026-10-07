@@ -15,7 +15,7 @@ public class InsertNode {
 
     static Node insert(Node root, int value) {
 
-        // If tree is empty
+    
         if (root == null) {
             return new Node(value);
         }
@@ -28,7 +28,7 @@ public class InsertNode {
 
             Node current = q.remove();
 
-            // Check left side
+          
             if (current.left == null) {
 
                 current.left = new Node(value);
@@ -38,7 +38,6 @@ public class InsertNode {
                 q.add(current.left);
             }
 
-            // Check right side
             if (current.right == null) {
 
                 current.right = new Node(value);
@@ -92,7 +91,7 @@ public class InsertNode {
 
         levelOrder(root);
 
-        // Insert 6
+
         root = insert(root, 6);
 
         System.out.println("\nAfter insertion:");
