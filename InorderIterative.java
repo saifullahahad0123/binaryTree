@@ -20,18 +20,16 @@ public class InorderIterative {
 
         while (curr != null || !st.isEmpty()) {
 
-            // Step 1: Go as far left as possible
+           
             while (curr != null) {
                 st.push(curr);
                 curr = curr.left;
             }
 
-            // Step 2: Pop and visit the node
             curr = st.pop();
 
             System.out.print(curr.val + " ");
 
-            // Step 3: Move to the right subtree
             curr = curr.right;
         }
     }
