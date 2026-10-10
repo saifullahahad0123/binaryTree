@@ -48,14 +48,12 @@ class Solution {
                 }
             }
 
-            // Reverse every alternate level
             if (!leftToRight) {
                 Collections.reverse(level);
             }
 
             ans.add(level);
 
-            // Change direction
             leftToRight = !leftToRight;
         }
 
